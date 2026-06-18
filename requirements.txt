@@ -1,4 +1,4 @@
-# Runtime and test dependencies for ProtACO.
+# Runtime and test dependencies for ProtLM-ACO.
 biopython
 lmdb
 matplotlib

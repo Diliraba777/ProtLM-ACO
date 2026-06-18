@@ -1,4 +1,4 @@
-"""ProtACO package metadata."""
+"""ProtLM-ACO package metadata."""
 
 __version__ = "0.1.0"
 

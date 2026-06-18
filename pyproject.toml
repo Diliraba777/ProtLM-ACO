@@ -3,9 +3,9 @@ requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "protaco"
+name = "protlm-aco"
 version = "0.1.0"
-description = "PyTorch Lightning implementation of ProtACO for protein score prediction from ProtT5 embeddings."
+description = "PyTorch Lightning implementation of ProtLM-ACO for protein score prediction from ProtT5 embeddings."
 readme = "README.md"
 requires-python = ">=3.9"
 license = { file = "LICENSE" }
@@ -54,12 +54,12 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/Diliraba777/ProtACO"
-Repository = "https://github.com/Diliraba777/ProtACO"
-Issues = "https://github.com/Diliraba777/ProtACO/issues"
+Homepage = "https://github.com/Diliraba777/ProtLM-ACO"
+Repository = "https://github.com/Diliraba777/ProtLM-ACO"
+Issues = "https://github.com/Diliraba777/ProtLM-ACO/issues"
 
 [tool.setuptools]
-packages = ["protaco", "scripts"]
+packages = ["protlm_aco", "scripts"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

@@ -1,14 +1,14 @@
-# ProtACO
+# ProtLM-ACO
 
-ProtACO is a PyTorch Lightning implementation for predicting protein absolute contact order (ACO) from sequence-derived protein language model representations. The workflow uses ProtT5 embeddings, a Transformer encoder regressor, and an MSLE plus pairwise-difference training objective.
+ProtLM-ACO is a PyTorch Lightning implementation for predicting protein absolute contact order (ACO) from sequence-derived protein language model representations. The workflow uses ProtT5 embeddings, a Transformer encoder regressor, and an MSLE plus pairwise-difference training objective.
 
-This repository accompanies the manuscript **"ProtACO: Prediction of Protein Absolute Contact Order from Sequence Using Pre-trained Language Models"**. It provides the model implementation, data-loading utilities, embedding generation script, training script, inference script, input-format examples, and smoke tests with synthetic embeddings.
+This repository accompanies the manuscript **"ProtLM-ACO: Prediction of Protein Absolute Contact Order from Sequence Using Pre-trained Language Models"**. It provides the model implementation, data-loading utilities, embedding generation script, training script, inference script, input-format examples, and smoke tests with synthetic embeddings.
 
 ## Project Layout
 
 ```text
 .
-|-- protaco/                 # Importable package with dataset and model code
+|-- protlm_aco/              # Importable package with dataset and model code
 |   |-- __init__.py
 |   |-- dataset.py           # Dataset and batch collation for protein embeddings
 |   `-- model.py             # Transformer encoder regressor
@@ -76,14 +76,14 @@ python -m scripts.generate_embeddings \
 
 This command reads protein sequences from FASTA, extracts ProtT5 embeddings, and stores them in an LMDB database. For local experiments, provide the path to the sequence file to be processed.
 
-### Train ProtACO
+### Train ProtLM-ACO
 
 ```bash
 python -m scripts.train \
   --csv examples/train_metadata.csv \
   --lmdb outputs/prottrans_embeddings.lmdb \
   --target-col CO_score \
-  --output-dir runs/protaco \
+  --output-dir runs/protlm_aco \
   --accelerator auto \
   --devices auto
 ```
@@ -95,7 +95,7 @@ python -m scripts.train \
   --csv path/to/train_metadata.csv \
   --lmdb path/to/prottrans_embeddings.lmdb \
   --target-col ACO_column_name \
-  --output-dir runs/protaco \
+  --output-dir runs/protlm_aco \
   --accelerator gpu \
   --devices 4 \
   --strategy ddp
@@ -164,13 +164,13 @@ The repository provides the code path needed to generate embeddings, train the r
 
 If you use this code, please cite:
 
-Yu, C., Ji, M., He, J., Ma, H., and Liu, X. (2026). ProtACO: Prediction of Protein Absolute Contact Order from Sequence Using Pre-trained Language Models. Submitted manuscript.
+Yu, C., Ji, M., He, J., Ma, H., and Liu, X. (2026). ProtLM-ACO: Prediction of Protein Absolute Contact Order from Sequence Using Pre-trained Language Models. Submitted manuscript.
 
-The source code is available at `https://github.com/Diliraba777/ProtACO`. Publication details will be updated after acceptance if a DOI or formal citation becomes available.
+The source code is available at `https://github.com/Diliraba777/ProtLM-ACO`. Publication details will be updated after acceptance if a DOI or formal citation becomes available.
 
 ## Acknowledgements
 
-ProtACO was inspired by and partially adapted from TM-Vec, a method for protein remote homology detection and structural alignment. Please see `THIRD_PARTY_NOTICES.md` for the TM-Vec repository, paper, and BSD 3-Clause license notice.
+ProtLM-ACO was inspired by and partially adapted from TM-Vec, a method for protein remote homology detection and structural alignment. Please see `THIRD_PARTY_NOTICES.md` for the TM-Vec repository, paper, and BSD 3-Clause license notice.
 
 ## License
 

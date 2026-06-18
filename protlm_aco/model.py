@@ -1,4 +1,4 @@
-"""Model definition for ProtACO."""
+"""Model definition for ProtLM-ACO."""
 
 import torch
 import torch.nn as nn

@@ -1,4 +1,4 @@
-"""Pytest fixtures for ProtACO smoke tests."""
+"""Pytest fixtures for ProtLM-ACO smoke tests."""
 
 import pickle
 

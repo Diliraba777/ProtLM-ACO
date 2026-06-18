@@ -1,6 +1,6 @@
 # Third-Party Notices
 
-ProtACO was inspired by and partially adapted from TM-Vec.
+ProtLM-ACO was inspired by and partially adapted from TM-Vec.
 
 ## TM-Vec
 

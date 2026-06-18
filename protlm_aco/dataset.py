@@ -1,4 +1,4 @@
-"""Dataset utilities for ProtACO."""
+"""Dataset utilities for ProtLM-ACO."""
 
 import pickle
 

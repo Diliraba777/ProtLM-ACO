@@ -1,4 +1,4 @@
-# ProtACO repository ignore rules.
+# ProtLM-ACO repository ignore rules.
 
 # Python
 __pycache__/

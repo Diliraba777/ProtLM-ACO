@@ -1,1 +1,1 @@
-"""Command-line entry points for ProtACO."""
+"""Command-line entry points for ProtLM-ACO."""

@@ -1,4 +1,4 @@
-"""Run ProtACO inference on FASTA sequences."""
+"""Run ProtLM-ACO inference on FASTA sequences."""
 
 import argparse
 import os
@@ -11,7 +11,7 @@ from Bio import SeqIO
 from torch.utils.data import DataLoader, Dataset
 from transformers import T5EncoderModel, T5Tokenizer
 
-from protaco.model import TransformerEncoderRegressor
+from protlm_aco.model import TransformerEncoderRegressor
 
 
 class FastaInferenceDataset(Dataset):
@@ -57,7 +57,7 @@ class FastaInferenceDataset(Dataset):
 
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="Run ProtACO inference on FASTA sequences.")
+    parser = argparse.ArgumentParser(description="Run ProtLM-ACO inference on FASTA sequences.")
     parser.add_argument("--checkpoint", required=True, help="Trained Lightning checkpoint path.")
     parser.add_argument("--fasta", required=True, help="Input FASTA file.")
     parser.add_argument("--output-csv", required=True, help="Output CSV for predictions.")

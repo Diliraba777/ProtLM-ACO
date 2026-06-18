@@ -1,4 +1,4 @@
-"""Train the ProtACO regressor."""
+"""Train the ProtLM-ACO regressor."""
 
 import argparse
 import os
@@ -13,19 +13,19 @@ from pytorch_lightning.callbacks import EarlyStopping, ModelCheckpoint
 from pytorch_lightning.loggers import TensorBoardLogger
 from torch.utils.data import DataLoader, random_split
 
-from protaco.dataset import ProteinEmbeddingDataset, collate_fn
-from protaco.model import TransformerEncoderRegressor
+from protlm_aco.dataset import ProteinEmbeddingDataset, collate_fn
+from protlm_aco.model import TransformerEncoderRegressor
 
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="Train the ProtACO regressor.")
+    parser = argparse.ArgumentParser(description="Train the ProtLM-ACO regressor.")
 
     parser.add_argument("--csv", required=True, help="Training metadata CSV.")
     parser.add_argument("--lmdb", required=True, help="LMDB path containing precomputed embeddings.")
     parser.add_argument("--id-col", default="id", help="Protein ID column in the CSV.")
     parser.add_argument("--target-col", default="CO_score", help="Regression target column in the CSV.")
-    parser.add_argument("--output-dir", default="runs/protaco", help="Directory for logs, checkpoints, and plots.")
-    parser.add_argument("--run-name", default="protaco", help="TensorBoard run name.")
+    parser.add_argument("--output-dir", default="runs/protlm_aco", help="Directory for logs, checkpoints, and plots.")
+    parser.add_argument("--run-name", default="protlm_aco", help="TensorBoard run name.")
     parser.add_argument("--version", type=int, default=None, help="Run version. Auto-incremented when omitted.")
     parser.add_argument("--min-version", type=int, default=0, help="Minimum auto-generated version number.")
 

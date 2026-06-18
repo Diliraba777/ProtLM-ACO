@@ -1,10 +1,10 @@
-"""Tests for ProtACO dataset loading and collation."""
+"""Tests for ProtLM-ACO dataset loading and collation."""
 
 import pytest
 import torch
 from torch.utils.data import DataLoader
 
-from protaco.dataset import ProteinEmbeddingDataset, collate_fn
+from protlm_aco.dataset import ProteinEmbeddingDataset, collate_fn
 
 
 def test_dataset_reads_embeddings_from_lmdb(tiny_embedding_data):

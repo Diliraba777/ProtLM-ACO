@@ -1,8 +1,8 @@
-"""Tests for the ProtACO model."""
+"""Tests for the ProtLM-ACO model."""
 
 import torch
 
-from protaco.model import TransformerEncoderRegressor
+from protlm_aco.model import TransformerEncoderRegressor
 
 
 def build_tiny_model():
