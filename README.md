@@ -164,7 +164,7 @@ The repository provides the code path needed to generate embeddings, train the r
 
 If you use this code, please cite:
 
-Yu, C., Ji, M., He, J., Ma, H., and Liu, X. (2026). ProtLM-ACO: Prediction of Protein Absolute Contact Order from Sequence Using Pre-trained Language Models. Submitted manuscript.
+Yu, C., Ji, M., He, J., Ma, H., and Liu, X. (2026). ProtLM-ACO: Prediction of Protein Absolute Contact Order from Sequence Using Pre-trained Language Models. Manuscript.
 
 The source code is available at `https://github.com/Diliraba777/ProtLM-ACO`. Publication details will be updated after acceptance if a DOI or formal citation becomes available.
 
